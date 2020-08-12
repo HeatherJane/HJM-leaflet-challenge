@@ -5,27 +5,15 @@
 ![1-Logo](Images/1-Logo.png)
 
 ### Your Mission
-After reviewing part one and part two of the assignment below are the topics I am going to address:
+
+To give the class a break after projects, this assignment has been slightly amended. The solution has been provided to you, and your task is to analyze the code and explain a few component of the solution. Here are the topics to address:
 1.	Briefly explain the logic for generating the base map.
-After updating the leaflet script dependencies, the base map is imported through leaflet mapbox using my API key as a variable the map is created. You can change the zoom and map size in this section as well. The we sent the 'mapid' to the html so that it populates on the web.
-
 2.	Describe how the JSON was loaded and how was the data traversed. Explain how was the information from the JSON used to render data on the map.
-After updating the D3 script dependencies, the USGS earthquake geojson is imported through D3.json. The geoJson function moves through the data, "Features" is the dictionary and the lat & long is the key to unlocking where the earthquakes are. The URL of this JSON pulls in the data for our visualization.
-
 3.	Explain the logic for generating the circles and amending the size of them. What does this communicate?
-The styleInfo function moves through the feature dictionary again and pulls out the properties.mag to find the magnitude of the earthquake and the GetColor matches the magnitude size to a specific color including a default color using a switch function. 
-
 4.	Describe how the layer for the Tectonic plates was generated. 
- First we set up the map layers, the basic gray map then the satellite and outdoor throught leaflet mapbox. Then we created a var for a new layer group - tectonic plates. Then used d3 to call in the tetonic plates data from the GeoJson page https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json and created a 'platedata' function to add the orange lines.
-
 5.	What are the components in the layer control? How were they generated? 
-The components of the layer control are the base map, the different color map layers and the earthquake & tectonic overlays. They are generated through a series of functions, first defining them as new layers groups, then the object that defines all the different layer components. .control has the layers, baseMaps, overlays which is then pushed(addto.map) to the map.
-
 6.	Explain the difference between the base map (tile layer) and the data layer(s).
-The base maps are just leaflet maps. The data layers are using D3 Json to pull in the data, a JS function to loop through the dictionary and pull out the data, for our visualization from the USGS website and the geojson from the github repository. 
-
 7.	Walk through the logic of how the legend was generated and rendered on the page.
-We created a div or place for the ledgend in the logic and called it "info ledgend" then a control function that's called in the css to loop through our intervals and generate a label with a colored square for each interval. Then created the grades and color vars. From there we loop through our intervals and generate a label with a colored square for each interval by pulling in the grades and color vars. Then ledgend. is addTo the map. 
 
 ### General Description
 

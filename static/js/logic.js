@@ -1,7 +1,7 @@
 // We create the tile layer that will be the background of our map.
 console.log("Step 1 working");
 
-var apiKey = "sk.eyJ1IjoiaGVhdGhlcmphbmVtb29yZSIsImEiOiJja2N2OGYzbTAwMXMyMnVwZXFqanRndXRoIn0.lRTIPaCACYvLOx-ogAefaA";
+var apiKey = "pk.eyJ1IjoiaGVhdGhlcmphbmVtb29yZSIsImEiOiJja2Rybnp2YzAwZjhyMnduOXZxenVkZHE3In0.E1xoiznqRjWK4pOWr5Dmig";
 
 var graymap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
   attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
